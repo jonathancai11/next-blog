@@ -7,7 +7,7 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider defaultTheme="light" attribute="class">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
