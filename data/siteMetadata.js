@@ -6,7 +6,7 @@ const siteMetadata = {
   language: 'en-us',
   siteUrl: 'https://jonathancai.com/',
   siteRepo: 'https://github.com/jonathancai11/next-blog',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/static/images/spike.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'address@yoursite.com',
