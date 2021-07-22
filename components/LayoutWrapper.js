@@ -2,7 +2,6 @@ import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
-import Footer from './Footer'
 import MobileNav from './MobileNav'
 
 const LayoutWrapper = ({ children }) => {
@@ -35,12 +34,10 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            {/* <ThemeSwitch /> */}
             <MobileNav />
           </div>
         </header>
         <main className="mb-auto">{children}</main>
-        <Footer />
       </div>
     </SectionContainer>
   )
