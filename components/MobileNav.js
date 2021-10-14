@@ -60,7 +60,7 @@ const MobileNav = () => {
       </button>
       <div
         className={`fixed w-full h-full top-28 right-0 bg-white dark:bg-gray-800  z-10 ease-in-out duration-300 ${
-          navShow ? 'opacity-95' : 'opacity-0'
+          navShow ? 'block opacity-95' : 'hidden opacity-0'
         }
         `}
       >
