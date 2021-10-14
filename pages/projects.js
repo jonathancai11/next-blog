@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import siteMetadata from '@/data/siteMetadata'
 import { projectData } from '@/data/projectData'
 import { PageSeo } from '@/components/SEO'
@@ -25,8 +23,8 @@ export default function Projects() {
                   return (
                     <tr key={i}>
                       <td>
-                        <Image
-                          src={project.icon || 'https://i.imgur.com/s7ajAQw.png'}
+                        <img
+                          src={project.icon}
                           style={{ width: '30px', marginRight: '10px' }}
                           alt=""
                         />
