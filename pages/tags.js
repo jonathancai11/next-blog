@@ -16,8 +16,8 @@ export default function Tags({ tags }) {
   return (
     <>
       <PageSeo title={`Tags - ${siteMetadata.author}`} description="Things I blog about" />
-      <div className="flex flex-col items-start justify-start dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-24">
-        <div className="flex flex-wrap max-w-lg mt-4">
+      <div className="flex flex-col items-start justify-start dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-12">
+        <div className="flex flex-wrap mt-4">
           {Object.keys(tags).length === 0 && 'No tags found.'}
           {sortedTags.map((t) => {
             return (
