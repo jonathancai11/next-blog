@@ -1,8 +1,7 @@
+import Image from 'next/image'
+
 import siteMetadata from '@/data/siteMetadata'
-import projectsData from '@/data/projectsData'
-import Image from '@/components/Image'
-import Link from '@/components/Link'
-import Card from '@/components/Card'
+import { projectData } from '@/data/projectData'
 import { PageSeo } from '@/components/SEO'
 
 export default function Projects() {
@@ -10,25 +9,40 @@ export default function Projects() {
     <>
       <PageSeo title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Projects
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase your projects with a hero image (16 x 9)
-          </p>
-        </div>
-        <div className="container py-12">
+        <div className="container py-12 px-4">
           <div className="flex flex-wrap -m-4">
-            {projectsData.map((d) => (
-              <Card
-                key={d.title}
-                title={d.title}
-                description={d.description}
-                imgSrc={d.imgSrc}
-                href={d.href}
-              />
-            ))}
+            <table className="text-left table-auto">
+              <thead>
+                <tr>
+                  <th> </th>
+                  <th>Name</th>
+                  <th className="hidden sm:block">Description</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                {projectData.map((project, i) => {
+                  return (
+                    <tr key={i}>
+                      <td>
+                        <Image
+                          src={project.icon || 'https://i.imgur.com/s7ajAQw.png'}
+                          style={{ width: '30px', marginRight: '10px' }}
+                          alt=""
+                        />
+                      </td>
+                      <td>{project.name}</td>
+                      <td className="hidden sm:block">{project.description}</td>
+                      <td>
+                        <a href={project.link} target="_blank" rel="noreferrer">
+                          {project.link_display}
+                        </a>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
