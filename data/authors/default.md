@@ -1,10 +1,10 @@
 ---
-name: Tails Azimuth
+name: Jonathan Cai
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
+# occupation: Professor of Atmospheric Science
+# company: Stanford University
 email: address@yoursite.com
-twitter: https://twitter.com/Twitter
+twitter: https://twitter.com/jonathanmcai
 linkedin: https://www.linkedin.com
 github: https://github.com
 ---
