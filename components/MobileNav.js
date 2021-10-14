@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Link from './Link'
+import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 
 const MobileNav = () => {
@@ -18,10 +19,21 @@ const MobileNav = () => {
   }
 
   return (
-    <div className="sm:hidden">
+    <div className="sm:hidden flex w-max">
+      <Link href="/" aria-label="Tailwind CSS Blog">
+        <div className="flex items-center justify-between">
+          {typeof siteMetadata.headerTitle === 'string' ? (
+            <div className=" text-black hidden h-6 text-2xl font-semibold sm:block">
+              {siteMetadata.headerTitle}
+            </div>
+          ) : (
+            siteMetadata.headerTitle
+          )}
+        </div>
+      </Link>
       <button
         type="button"
-        className="w-8 h-8 ml-1 mr-1 rounded"
+        className="w-8 h-8 ml-1 mr-1 rounded z-20 relative"
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
@@ -47,9 +59,10 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed w-full h-full top-24 right-0 bg-gray-200 dark:bg-gray-800 opacity-95 z-10 transform ease-in-out duration-300 ${
-          navShow ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed w-full h-full top-28 right-0 bg-white dark:bg-gray-800  z-10 ease-in-out duration-300 ${
+          navShow ? 'opacity-95' : 'opacity-0'
+        }
+        `}
       >
         <button
           type="button"
